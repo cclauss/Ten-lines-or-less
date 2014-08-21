@@ -1,0 +1,5 @@
+import clipboard
+filename = 'pyui_from_clipboard.pyui'  # edit this line BEFORE running
+with open(filename, 'w') as out_file:
+    out_file.write(clipboard.get())
+print('The contents of the clipboard are now on file {}.'.format(filename))
