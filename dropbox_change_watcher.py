@@ -1,5 +1,8 @@
 # See: http://omz-forums.appspot.com/editorial/post/5906215083180032
 
+# NOTE: This is probably superceeded by the "Sync with Dropbox" capability
+# See: https://omz-forums.appspot.com/editorial/post/5906215083180032
+
 import dropboxlogin, time
 
 dropbox_client = dropboxlogin.get_client()
