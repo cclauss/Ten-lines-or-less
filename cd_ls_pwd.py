@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Simulate the unix commands cd, ls, and pwd for non-Unix, non-iPython platforms (Pythonista for iOS)
+# Simulate the unix commands cd, ls, and pwd for non-Unix, non-iPython platforms (e.g. Pythonista for iOS)
 # Recommended usage: $ python
 #                  >>> import cd_ls_pwd     # import the three functions
 #                  >>> cd = cd_ls_pwd.cd    # send up a top-level alias
