@@ -8,7 +8,7 @@ import dropboxlogin, time
 dropbox_client = dropboxlogin.get_client()
 
 def dropbox_change_watcher(file_path, seconds_to_sleep=2):
-    original_revision = new_revision = dropbox_client.metadata(file_path)['revision']
+    original_revision = dropbox_client.metadata(file_path)['revision']
     while True:
         metadata = dropbox_client.metadata(file_path)
         if metadata['revision'] == original_revision:
