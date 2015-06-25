@@ -9,7 +9,7 @@ def timer(name='timer'):
     print('Elapsed time ({}): {}'.format(name, datetime.datetime.now() - start)) 
 
 if __name__ == '__main__':
-    # measure the speed of two methods of dict creation
+    # measure the speed of two ways to create a dict
     with timer('dict = {}'):
         for _ in xrange(100000):
             d = {}
