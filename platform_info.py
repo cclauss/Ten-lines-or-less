@@ -6,5 +6,5 @@ for name, value in inspect.getmembers(platform):
             name, value = name + '()', str(value())
         except (IndexError, TypeError):
             continue
-        if value.strip("( ,')") and not value.startswith('<module'):
+        if value.strip("( ,')"):
             print('{:>23} = {}'.format(name, value))
