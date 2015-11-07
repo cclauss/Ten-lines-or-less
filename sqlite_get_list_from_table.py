@@ -2,10 +2,13 @@
 
 '''
 Useful tools for reading sqlite database tables into Python data structures.
+Each row of your database table is converted into a namedtuple with fieldnames
+taken from the table definition.  Using the namedtuple._asdict() method allows
+you to use treat each table as a list of dicts or as a dict of dicts.
 
 get_list_from_table() + get_dict_from_table() is 12 lines because of the
-uniqueness test in the dict routine and because doing camelize() inline
-would make the code too difficult to understand.
+useful uniqueness test in the dict routine and because doing camelize()
+inline would make the code too difficult to understand.
 '''
 
 import collections, sqlite3
