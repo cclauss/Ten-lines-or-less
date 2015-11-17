@@ -2,18 +2,16 @@
 
 # See: https://forum.omz-software.com/topic/2135/telling-if-i-m-pythonista-or-editorial-or-sublime-text-or-whatever
 
-omz_env = None
-try:
-    import workflow
-    omz_env = 'Editorial'
-except ImportError:
+def omz_env():
     try:
-        import scene
-        omz_env = 'Pythonista'
+        import workflow
+        return 'Editorial'
     except ImportError:
-        pass
+        try:
+            import scene
+            return 'Pythonista'
+        except ImportError:
+            return None
 
-if not omz_env:
-    print('Sublime or other non-OMZ Software platform.')
-else:
-    print('Yeah!!')
+env = omz_env()
+print('Yeah!!  ' + env if env else 'Sublime or other non-OMZ Software platform.')
