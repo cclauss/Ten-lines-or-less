@@ -4,7 +4,7 @@
 
 import console, photos, ui
 
-filename = 'my_super_special_image'
+filename = 'my_super_special_image.jpg'
 
 img, metadata = photos.pick_image(include_metadata=True, raw_data=True)
 # import pprint ; pprint.pprint(metadata)
