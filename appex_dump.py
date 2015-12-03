@@ -2,15 +2,14 @@
 
 # See: https://forum.omz-software.com/topic/2358/appex-safari-content
 
-import appex
+import appex, inspect
 
 def main():
     if appex.is_running_extension():
-        for func in (appex.get_attachments, appex.get_file_path,
-            appex.get_file_paths, appex.get_image, appex.get_images,
-            appex.get_text, appex.get_url, appex.get_urls,
-            appex.get_vcard, appex.get_vcards):
-            print('{:<11} : {}'.format(func.func_name.partition('_')[2], func()))
+        for name_func in inspect.getmembers(appex):
+            name, func = name_func
+            if name.startswith('get_'):  # find all appex.get_xxx() methods
+                print('{:<11} : {}'.format(name.partition('_')[2], func()))
 
 if __name__ == '__main__':
     main()
