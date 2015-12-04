@@ -9,5 +9,5 @@ for name, value in inspect.getmembers(platform):
         if value.strip("( ,')"):
             print('{:>23} = {}'.format(name, value))
 
-# import sys
+#import sys
 #print(sys.platform, sys.version)
