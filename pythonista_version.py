@@ -4,7 +4,7 @@
 import os, platform, plistlib, sys
 
 def pythonista_version():
-    plist = plistlib.readPlist(os.path.abspath(os.path.join(sys.executable, '../Info.plist')))
+    plist = plistlib.readPlist(os.path.abspath(os.path.join(sys.executable, '..', 'Info.plist')))
     return '{CFBundleShortVersionString} ({CFBundleVersion})'.format(**plist)
 
 fmt = 'Pythonista version {0} on iOS {1} on an {3}.'
