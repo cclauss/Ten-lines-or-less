@@ -7,5 +7,5 @@ def pythonista_version():
     return '{CFBundleShortVersionString} ({CFBundleVersion})'.format(**plist)
 
 mac_ver = platform.mac_ver()
-fmt = 'Pythonista version {} on iOS {} on an {}.'
-print(fmt.format(pythonista_version(), mac_ver[0], mac_ver[2]))
+fmt = 'Pythonista version {0} on iOS {1} on an {3}.'
+print(fmt.format(pythonista_version(), *mac_ver))
