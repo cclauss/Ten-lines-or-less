@@ -1,8 +1,9 @@
-import os, ui
+# coding: utf-8
+
+import sys, ui
 
 if __name__ == '__main__':
-    app_path = os.path.abspath(os.path.join(os.__file__, '../..'))
-    fmt = 'file://{}/Documentation/index.html'
+    docs_path = 'file://{}/../Documentation/index.html'.format(sys.executable)
     web_view = ui.WebView(name='Pythonista Documentation')
-    web_view.load_url(fmt.format(app_path))
+    web_view.load_url(docs_path)
     web_view.present()  # present Pythonista docs in a ui.WebView
