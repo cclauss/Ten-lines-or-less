@@ -13,4 +13,4 @@ class MyClass(object):
         caller_name = inspect.getouterframes(inspect.currentframe(), 2)[1][3]
         return NotImplementedError(fmt.format(self.__class__.__name__, caller_name))
 
-MyClass()
+MyClass()  # --> NotImplementedError: Class MyClass does not implement my_function()
