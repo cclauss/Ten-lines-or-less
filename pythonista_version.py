@@ -1,4 +1,5 @@
 # Output: Pythonista version 1.6 (160037) on iOS 9.2 on an iPad3,4.
+#         Pythonista version 1.6 (160037) on iOS 9.2 on an iPad5,4.
 # built on https://forum.omz-software.com/topic/2444/determining-pythonista-s-version/3
 
 import os, platform, plistlib, sys
