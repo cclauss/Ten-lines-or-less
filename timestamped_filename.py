@@ -5,9 +5,10 @@
 
 import datetime, os
 
-def timestamped_filename(file_name):
+def timestamped_filename(file_name, date_time=None):
+    date_time = date_time or datetime.datetime.now()
     root, ext = os.path.splitext(file_name)
-    return '{}{:_%Y_%m_%d_%H_%M_%S}{}'.format(root, datetime.datetime.now(), ext)
+    return '{}{:_%Y_%m_%d_%H_%M_%S}{}'.format(root, date-time, ext)
 
 if __name__ == '__main__':
     import time
