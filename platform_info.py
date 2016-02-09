@@ -7,7 +7,7 @@ for name, value in inspect.getmembers(platform):
         except (IndexError, TypeError):
             continue
         if value.strip("( ,')"):
-            print('{:>23}() = {}'.format(name, value))
+            print('{:>21}() = {}'.format(name, value))
 
 #import sys
 #print(sys.platform, sys.version)
