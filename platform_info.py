@@ -1,7 +1,7 @@
 import inspect, platform
 
 for name, value in inspect.getmembers(platform):
-    if name[0] != '_' and name != 'libc_ver' and callable(value):
+    if name[0] != '_' and callable(value):
         try:
             name, value = name + '()', str(value())
         except (IndexError, TypeError):
