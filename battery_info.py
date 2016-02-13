@@ -3,14 +3,13 @@
 import collections, objc_util
 
 battery_info = collections.namedtuple('battery_info', 'level state')
-states = 'unknown unplugged charging full'.split()
 
 def get_battery_info():
     device = objc_util.ObjCClass('UIDevice').currentDevice()
     device.setBatteryMonitoringEnabled_(True)
     try:
         return battery_info(int(device.batteryLevel() * 100),
-                            states[device.batteryState()])
+            'unknown unplugged charging full'.split()[device.batteryState()])
     finally:
         device.setBatteryMonitoringEnabled_(False)
 
