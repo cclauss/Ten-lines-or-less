@@ -10,7 +10,8 @@ def files_and_folders(dir_path='.'):
     f_and_f = os.listdir(dir_path)
     folders = [f for f in f_and_f if os.path.isdir(os.path.abspath(f))]
     files = set(f_and_f) - set(folders)
-    return {'files': tuple(sorted(files)), 'folders': tuple(sorted(folders))}
+    return {'files': tuple(sorted(files, key=str.lower)),
+        'folders': tuple(sorted(folders, key=str.lower))}
 
 
 def old_files_and_folders(dir_path='.'):
