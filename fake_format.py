@@ -18,7 +18,7 @@ print(fake_fmt('My username is {user_name} but my email address is {email}.'))
 fake = Faker()
 print(fake_fmt('{name} considers a {catch_phrase} in {country}', fake))
 
-# =====
+# ===== more examples
 
 fmt = '\t{first_name:10} {last_name:10} {random_int:>7}'
 print('\n'.join(fake_fmt(fmt) for _ in range(10)))
