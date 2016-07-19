@@ -7,8 +7,7 @@ from faker import Faker
 def fake_fmt(fmt="{first_name}'s favorite number: {random_int}", fake=None):
     fake = fake or Faker()
     fields = [fld.split('}')[0].split(':')[0] for fld in fmt.split('{')[1:]]
-    fields = [f for f  in fields if f in filter(lambda x: x[0] != "_", fake.__dir__())]
-    return fmt.format(**{field: getattr(fake, field)() for field in fields})
+    return fmt.format(**{field: getattr(fake, field)() for field in fields if field in filter(lambda x: x[0] != "_", fake.__dir__())})
 
 print(fake_fmt())
 
