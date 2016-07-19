@@ -7,6 +7,7 @@ from faker import Faker
 def fake_fmt(fmt="{first_name}'s favorite number: {random_int}", fake=None):
     fake = fake or Faker()
     fields = [fld.split('}')[0].split(':')[0] for fld in fmt.split('{')[1:]]
+    fields = [f for f  in fields if f in filter(lambda x: x[0] != "_", fake.__dir__())]
     return fmt.format(**{field: getattr(fake, field)() for field in fields})
 
 print(fake_fmt())
@@ -30,7 +31,7 @@ print(fake_fmt('''
 Three weeks before that date, we will send a replacement card to your address:
 
 {street_address}
-{city}, {state_abbr}  {postalcode_plus4}
+{city}, {state_abbr}  {postcode}
 
     Yours truely,
         {name}
