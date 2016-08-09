@@ -8,6 +8,7 @@ filename = 'WDI_Data.csv'
 
 # Warning: this can take two minutes to download!!
 with zipfile.ZipFile(io.BytesIO(requests.get(url).content)) as zip_file:
+    print('\n'.join(name for name in zip_file.namelist()))
     zip_file.extractall()
 
 # On Python 2, remove: ", newline=''"
