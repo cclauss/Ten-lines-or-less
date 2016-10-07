@@ -2,7 +2,7 @@ language: python
 python:
     - "2.7"     # Python 2.7.12  and pip 8.1.2
     - "3.5"     # Python 3.5.2   and pip 8.1.2
-   - "nightly"  # Python 3.6.0b1 and pip 8.1.2  # currently points to 3.6-dev
+    - "nightly"  # Python 3.6.0b1 and pip 8.1.2  # currently points to 3.6-dev
 # command to install dependencies
 install:
 #   - pip install --upgrade pip  # pip 8.1.2
