@@ -1,8 +1,9 @@
 language: python
 python:
-    - "2.7"     # Python 2.7.12  and pip 8.1.2
-    - "3.5"     # Python 3.5.2   and pip 8.1.2
-    - "nightly"  # Python 3.6.0b1 and pip 8.1.2  # currently points to 3.6-dev
+    - "2.7.12"   # Python 2.7.12   and pip 8.1.2
+    - "3.5"      # Python 3.5.2    and pip 8.1.2
+    - "nightly"  # Python 3.6.0a4+ and pip 8.1.2  # currently points to 3.6-dev
+    - "3.6.0b1"
 # command to install dependencies
 install:
 #   - pip install --upgrade pip  # pip 8.1.2
@@ -11,7 +12,7 @@ install:
     - pip install flake8
 # preflight
 before_script:
-    flake8 . --count --max-line-length=127 --statistics  # --exit-zero
+    flake8 . --count --max-line-length=127 --statistics --exit-zero
 # command to run tests
 # script: flake8 .  # nosetests
 script: ls  # nosetests
