@@ -12,7 +12,8 @@ install:
     - pip install flake8
 # preflight
 before_script:
-    flake8 . --count --max-line-length=127 --statistics --exit-zero
+    # E401 multiple imports on one line
+    flake8 . --count -hang-closing --ignore=E401 --max-line-length=127 --statistics --exit-zero
 # command to run tests
 # script: flake8 .  # nosetests
 script: ls  # nosetests
