@@ -10,7 +10,7 @@ class MonthView(ui.View):
         self.add_subview(ui.TextView(name='text_view',
                                      frame=(0, 0, 4096, 4096)))
         self['text_view'].editable = False
-        self['text_view'].font = ('Courier New', ui.get_screen_size().w/12.25)
+        self['text_view'].font = ('Courier', ui.get_screen_size().w / 12.25)
         self['text_view'].text = calendar.TextCalendar().formatmonth(
             in_date.year, in_date.month)
         self.present()
