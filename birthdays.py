@@ -7,7 +7,6 @@ NOTE: This script requires access to your contacts in order to work.
 import contacts, datetime  # noqa
 
 
-
 def days_until_next(date):
     now = datetime.datetime.now()
     inc = int(datetime.datetime(now.year, date.month, date.day) < now)
