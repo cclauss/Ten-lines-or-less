@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+
 class MyClass(object):
     def __init__(self):
         self.my_function()
@@ -11,6 +12,8 @@ class MyClass(object):
         import inspect
         fmt = 'Class {} does not implement {}()'
         caller_name = inspect.getouterframes(inspect.currentframe(), 2)[1][3]
-        return NotImplementedError(fmt.format(self.__class__.__name__, caller_name))
+        return NotImplementedError(fmt.format(self.__class__.__name__,
+                                              caller_name))
 
-MyClass()  # --> NotImplementedError: Class MyClass does not implement my_function()
+# --> NotImplementedError: Class MyClass does not implement my_function()
+MyClass()

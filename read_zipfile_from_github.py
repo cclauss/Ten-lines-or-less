@@ -3,7 +3,7 @@
 
 # Pythonista appex script to copy and unpack a repo zipfile from GitHub
 
-import appex, os, zipfile
+import appex, os, zipfile  # noqa
 
 if appex.is_running_extension():
     srce_path = appex.get_file_path()

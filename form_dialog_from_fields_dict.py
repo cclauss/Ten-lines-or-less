@@ -1,12 +1,13 @@
 # coding: utf-8
 
-import collections, dialogs
+import collections, dialogs  # noqa
 
-# simplify the creation of simple form_dialogs
-    
+'''simplify the creation of simple form_dialogs'''
+
+
 def form_dialog_from_fields_dict(title, fields_dict):
     return dialogs.form_dialog(title, [{'title': k, 'type': v}
-        for k, v in fields_dict.iteritems()])
+                               for k, v in fields_dict.iteritems()])
 
 # left side is the field name
 # right side is the field data type

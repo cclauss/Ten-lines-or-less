@@ -2,7 +2,7 @@
 
 # See: https://forum.omz-software.com/topic/2410/horizonally-scrolling-textview
 
-import string, ui
+import string, ui  # noqa
 
 text = string.letters * 5
 

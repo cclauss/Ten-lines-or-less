@@ -1,6 +1,7 @@
 # See: http://omz-forums.appspot.com/pythonista/post/5823162193281024
 
-import dropboxlogin, tarfile
+import dropboxlogin
+import tarfile
 
 tar_file_name = 'my_archive.tar'
 

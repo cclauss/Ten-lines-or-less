@@ -1,6 +1,7 @@
 # coding: utf-8
 
-import sys, ui
+import sys
+import ui
 
 if __name__ == '__main__':
     docs_path = 'file://{}/../Documentation/index.html'.format(sys.executable)

@@ -1,8 +1,8 @@
 # coding: utf-8
 
-# See: https://forum.omz-software.com/topic/2407/images-not-loading-from-camera-roll
+# See: https://forum.omz-software.com/topic/2407/images-not-loading-from-camera-roll  # noqa
 
-import console, photos, ui
+import console, photos, ui  # noqa
 
 filename = 'my_super_special_image.jpg'
 

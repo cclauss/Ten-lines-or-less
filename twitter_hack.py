@@ -7,6 +7,8 @@ account = twitter.get_all_accounts()[0]
 fmt = '''> user: {user[screen_name]}
 {text}
 ________________________>'''
+
+
 def perform_search():
     data = twitter.search(account, 'Privacy OR Apple from:RepTedLieu',
                           parameters={'result_type': 'mixed'})

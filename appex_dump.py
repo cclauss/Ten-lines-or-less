@@ -2,7 +2,8 @@
 
 # See: https://forum.omz-software.com/topic/2358/appex-safari-content
 
-import appex, inspect
+import appex, inspect  # noqa
+
 
 def main():
     if appex.is_running_extension():
