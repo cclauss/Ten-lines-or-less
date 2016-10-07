@@ -5,7 +5,7 @@ python:
    - "nightly"  # Python 3.6.0b1 and pip 8.1.2  # currently points to 3.6-dev
 # command to install dependencies
 install:
-#   - pip install --upgrade pip  # pip 6.0.8 vs. pip 8.1.2
+#   - pip install --upgrade pip  # pip 8.1.2
 #   - pip --version  # This does not work
 #   - pip install -r requirements.txt
     - pip install flake8
