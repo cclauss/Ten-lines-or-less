@@ -13,6 +13,7 @@ def timestamped_filename(file_name, date_time=None):
     fmt = '{}{:_%Y_%m_%d_%H_%M_%S}{}'
     return fmt.format(root, date_time, ext)
 
+
 if __name__ == '__main__':
     import time
     print(timestamped_filename('sample.txt'))
