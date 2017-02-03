@@ -15,5 +15,6 @@ class MyClass(object):
         return NotImplementedError(fmt.format(self.__class__.__name__,
                                               caller_name))
 
+
 # --> NotImplementedError: Class MyClass does not implement my_function()
 MyClass()
