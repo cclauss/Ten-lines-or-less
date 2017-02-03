@@ -17,6 +17,7 @@ before_script:
 # command to run tests
 # script: flake8 .  # nosetests
 script:
+    - pip install Faker
     - chmod +x *.py
     - ./fake_format.py
 notifications:
