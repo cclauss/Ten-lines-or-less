@@ -12,5 +12,6 @@ def main():
             if name.startswith('get_'):  # find all appex.get_xxx() methods
                 print('{:<11} : {}'.format(name.partition('_')[2], func()))
 
+
 if __name__ == '__main__':
     main()
