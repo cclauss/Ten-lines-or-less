@@ -9,6 +9,7 @@ def fake_fmt(fmt="{first_name}'s favorite number: {random_int}", fake=None):
     fields = [fld.split('}')[0].split(':')[0] for fld in fmt.split('{')[1:]]
     return fmt.format(**{field: getattr(fake, field)() for field in fields})
 
+
 # with no parameters
 print(fake_fmt())
 
