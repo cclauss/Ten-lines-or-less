@@ -13,6 +13,7 @@ def sqlite_table_layout(sqlite_connection):
     fmt = 'Table "{}" contains {} records with columns:\n      {}'
     return '\n'.join(fmt.format(x, *table_dict[x]) for x in sorted(table_dict))
 
+
 with sqlite3.connect('my.db') as conn:
     print(sqlite_table_layout(conn))
 
