@@ -15,4 +15,5 @@ class MonthView(ui.View):
             in_date.year, in_date.month)
         self.present()
 
+
 MonthView(datetime.date.today())
