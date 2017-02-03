@@ -14,5 +14,6 @@ def omz_env():
         except ImportError:
             return None
 
+
 env = omz_env()
 print('Yeah!! ' + env if env else 'Sublime or other non-OMZ Software platform')
