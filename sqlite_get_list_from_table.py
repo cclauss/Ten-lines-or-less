@@ -48,6 +48,7 @@ def get_employee_dict():
     with sqlite3.connect(db_filename) as conn:
         return get_dict_from_table(conn, 'employee', 'employee_id')
 
+
 services = get_services()
 employee_dict = get_employee_dict()
 
