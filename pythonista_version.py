@@ -17,6 +17,7 @@ def pythonista_version():  # 2.0.1 (201000)
                                                '..', 'Info.plist')))
     return '{CFBundleShortVersionString} ({CFBundleVersion})'.format(**plist)
 
+
 ios_ver, _, machine_model = platform.mac_ver()
 bit = platform.architecture()[0].rstrip('bit') + '-bit'
 rez = '({:.0f} x {:.0f})'.format(*scene.get_screen_size())
