@@ -14,4 +14,5 @@ def perform_search():
                           parameters={'result_type': 'mixed'})
     print('\n'.join(fmt.format(**status) for status in data['statuses']))
 
+
 perform_search()
