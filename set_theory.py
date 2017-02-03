@@ -10,6 +10,7 @@ def set_theory(abc, ac, cde):
     print('Is proper suubset:    ac  < abc, abc <  abc --> {}, {}'.format(ac < abc, abc < abc))    # noqa
     print('Is proper superset:   abc >  ac, abc >  abc --> {}, {}'.format(abc > ac, abc > abc))    # noqa
 
+
 if __name__ == '__main__':
     # --> ['a', 'b', c'] with duplicate c's will be thrown away
     abc = {'a', 'b', 'c', 'c', 'c'}
