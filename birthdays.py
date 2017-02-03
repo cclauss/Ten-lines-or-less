@@ -12,6 +12,7 @@ def days_until_next(date):
     inc = int(datetime.datetime(now.year, date.month, date.day) < now)
     return (datetime.datetime(now.year + inc, date.month, date.day) - now).days
 
+
 text = '\n'.join('* {p.first_name} in {days} days'.format(**x) for x
     in sorted(({'p': p, 'days': days_until_next(p.birthday)} for p
     in contacts.get_all_people() if p.birthday), key=lambda x: x['days']))  # noqa
