@@ -21,6 +21,7 @@ def battery_is_low(threshold=20):
     return (battery_info.level <= threshold and
             battery_info.state.startswith('un'))
 
+
 if __name__ == '__main__':
     print(get_battery_info())  # battery_info(level=64, state='unplugged')
     print(battery_is_low(15))  # False
