@@ -24,6 +24,7 @@ def ls(in_dir=os.curdir):
 def pwd():
     print(os.path.abspath(os.curdir))
 
+
 if __name__ == '__main__':
     pwd()
     ls()
