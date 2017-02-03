@@ -19,6 +19,7 @@ def sudoku_board(board):
     return '\n'.join(sudoku_line(i, line) for i, line
                      in enumerate(board.splitlines())) + '\n' + border_line()
 
+
 board = '''123456789\n234567890\n345678901\n456789012
 567890123\n678901234\n789012345\n890123456\n901234567'''
 
