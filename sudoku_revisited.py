@@ -10,4 +10,5 @@ def board_format(board):
     b = s.replace('|', '-')
     return b + s.join(' | '.join(str(y) for y in x) for x in board) + b
 
+
 print(board_format(random_board()))
