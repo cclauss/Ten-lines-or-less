@@ -17,8 +17,8 @@ before_script:
 # command to run tests
 # script: flake8 .  # nosetests
 script:
-    chmod +x *.py
-    ./fake_format.py
+    - chmod +x *.py
+    - ./fake_format.py
 notifications:
     on_success: change
     on_failure: always
