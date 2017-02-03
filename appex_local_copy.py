@@ -17,5 +17,6 @@ def main():
             out_file.write(attachments[0])
         print('{} bytes written to {}.'.format(len(attachments[0]), file_name))
 
+
 if __name__ == '__main__':
     main()
