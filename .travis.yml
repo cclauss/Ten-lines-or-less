@@ -16,7 +16,9 @@ before_script:
     flake8 . --count --ignore=E128,E401 --max-line-length=127 --statistics  # --exit-zero
 # command to run tests
 # script: flake8 .  # nosetests
-script: ./fake_format.py
+script:
+    chmod +x *.py
+    ./fake_format.py
 notifications:
     on_success: change
     on_failure: always
