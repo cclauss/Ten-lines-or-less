@@ -24,4 +24,5 @@ def old_files_and_folders(dir_path='.'):
             files.append(filename)
     return tuple(files), tuple(folders)
 
+
 print(files_and_folders())
