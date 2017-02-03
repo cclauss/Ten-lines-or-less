@@ -17,6 +17,7 @@ def dropbox_change_watcher(file_path, seconds_to_sleep=2):
         else:
             return metadata
 
+
 if __name__ == '__main__':
     import os, pprint  # noqa
     file_path_to_watch = os.path.split(__file__)[1]  # just for testing/debug
