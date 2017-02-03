@@ -12,6 +12,7 @@ def load_view_from_list(view_list):
         temp_file.seek(0)  # move the file read cursor back to byte zero
         return ui.load_view(temp_file.name)
 
+
 view = load_view_from_list(_aview)
 view.action = lambda sender: sender.close()
 view.present(hide_title_bar=True)
