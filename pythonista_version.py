@@ -5,6 +5,9 @@
 #    iPad5,4 with a screen size of (1024 x 768) * 2
 # Pythonista version 3.0 (300007) running Python 2.7.5 on iOS 9.3.1 on a 64-bit
 #    iPad5,4 with a screen size of (1024 x 768) * 2
+# Pythonista version 3.1 (301016) running Python 3.5.1 on iOS 10.2.1 on a 64-bit
+#    iPad5,4 with a screen size of (1024 x 768) * 2
+
 #
 # built on:
 # https://forum.omz-software.com/topic/2444/determining-pythonista-s-version/3
