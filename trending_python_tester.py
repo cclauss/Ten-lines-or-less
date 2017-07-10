@@ -5,7 +5,7 @@ import requests
 
 ignore = ['python/cpython']
 
-fmt = """    # {i} flake8 testing of: {long}...
+fmt = """    echo ; echo -n "{i} flake8 testing of {long} on " ; python -V
     - git clone --depth=50 --branch=master https://github.com/{long} ~/{short}
     - cd ~/{short}
     # stop the build if there are Python syntax errors or undefined names
