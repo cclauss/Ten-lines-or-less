@@ -26,8 +26,11 @@ python_implementation() = CPython
  python_version_tuple() = ('3', '6', '1')
               release() = 17.0.0
                system() = Darwin
-                uname() = uname_result(system='Darwin', node='CCC-iPad', release='17.0.0', version='Darwin Kernel Version 17.0.0: Fri Sep  1 14:59:13 PDT 2017; root:xnu-4570.2.5~167/RELEASE_ARM64_T7001', machine='iPad5,4', processor='')
-              version() = Darwin Kernel Version 17.0.0: Fri Sep  1 14:59:13 PDT 2017; root:xnu-4570.2.5~167/RELEASE_ARM64_T7001
+                uname() = uname_result(system='Darwin', node='CCC-iPad', release='17.0.0',
+                                       version='Darwin Kernel Version 17.0.0: Fri Sep  1 14:59:13 PDT 2017; '
+                                       'root:xnu-4570.2.5~167/RELEASE_ARM64_T7001', machine='iPad5,4', processor='')
+              version() = ('Darwin Kernel Version 17.0.0: Fri Sep  1 14:59:13 PDT 2017; '
+                           'root:xnu-4570.2.5~167/RELEASE_ARM64_T7001')
 
 ios 3.6.1 (default, Aug 24 2017, 16:20:00) 
 [GCC 4.2.1 Compatible Apple LLVM 8.1.0 (clang-802.0.42)]
