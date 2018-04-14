@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# Inspired by https://pythonclock.org
+
 from datetime import date, timedelta
 print((date(2020, 1, 1) - date.today()).days,
       'days until Python 2 end of life.')
