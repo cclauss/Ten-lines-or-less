@@ -12,15 +12,16 @@ def daze_left(days=500):
     return f'On {d} there will be {days} days until Python 2 end of life.'
 
 
-print(daze_left(days=600))
-print(daze_left(days=500))
-print(daze_left(days=250))
-print(daze_left(days=100))
+for days in (600, 500, 400, 300, 250, 200, 100):
+    print(daze_left(days=days))
 
 """
 627 days until Python 2 end of life.
 On 2018-05-11 there will be 600 days until Python 2 end of life.
 On 2018-08-19 there will be 500 days until Python 2 end of life.
+On 2018-11-27 there will be 400 days until Python 2 end of life.
+On 2019-03-07 there will be 300 days until Python 2 end of life.
 On 2019-04-26 there will be 250 days until Python 2 end of life.
+On 2019-06-15 there will be 200 days until Python 2 end of life.
 On 2019-09-23 there will be 100 days until Python 2 end of life.
 """
