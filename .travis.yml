@@ -1,54 +1,38 @@
 group: travis_latest
 language: python
-#matrix:
-#  include:
-#    - python: 2.6    # 2.6.9  pip  9.0.1
-#    - python: 2.7    # 2.7.14 pip  9.0.1
-#    - python: 3.3    # 3.3.6  pip  8.1.2
-#    - python: 3.4    # 3.4.6  pip  9.0.1
-#    - python: 3.5    # 3.5.5  pip  9.0.1
-#    - python: 3.6    # 3.6.3  pip  9.0.1
-#    - python: 3.7    # 3.7.0  pip 10.0.1
-#      dist: xenial   # Required for Python 3.7
-#      sudo: true     # https://github.com/travis-ci/travis-ci/issues/9069
-#    - python: 3.8-dev
-#      dist: xenial   # Required for Python 3.7
-#      sudo: true     # https://github.com/travis-ci/travis-ci/issues/9069
-#  - python: nightly
-#    dist: xenial
-#    sudo: true
-#  allow_failures:
-#    - python: 3.8-dev
-#    - python: nightly
 python:
-  - 2.6    # 2.6.9  pip  9.0.1
-  - 2.7    # 2.7.14 pip  9.0.1
-  - 3.3    # 3.3.6  pip  8.1.2
-  - 3.4    # 3.4.6  pip  9.0.1
-  - 3.5    # 3.5.5  pip  9.0.1
-  - 3.6    # 3.6.3  pip  9.0.1
-  - 3.7    # 3.7.0  pip 10.0.1
-    # dist: xenial
-    # sudo: true
-  - 3.8-dev
-    # dist: xenial
-    # sudo: true
-  - python: nightly
-    # dist: xenial
-    # sudo: true
-  - pypy   # 2.7.13 pip  9.0.1
-  - pypy3  # 3.5.3  pip  9.0.1
+  - 2.6    # 2.6.9  pip  9.0.1 -->  9.0.3
+  - 2.7    # 2.7.14 pip  9.0.1 --> 10.0.1
+  - 3.3    # 3.3.6  pip  8.1.2 -->  7.1.2 !!!
+  - 3.4    # 3.4.6  pip  9.0.1 --> 10.0.1
+  - 3.5    # 3.5.5  pip  9.0.1 --> 10.0.1
+  - 3.6    # 3.6.3  pip  9.0.1 --> 10.0.1
+  - pypy   # 2.7.13 pip  9.0.1 --> 10.0.1
+  - pypy3  # 3.5.3  pip  9.0.1 --> 10.0.1
+matrix:
+  allow_failures:
+    - python: 3.8-dev
+    - python: nightly
+  include:  # https://github.com/travis-ci/travis-ci/issues/9069
+    - python: 3.7      # 3.7.0  pip 10.0.1
+      dist: xenial     # Required for Python 3.7
+      sudo: true       # Required for Python 3.7
+    - python: 3.8-dev
+      dist: xenial     # Required for Python 3.7
+      sudo: true       # Required for Python 3.7
+    - python: nightly
+      dist: xenial     # Required for Python 3.7
+      sudo: true       # Required for Python 3.7
 # command to install dependencies
 install:
     - pip install --upgrade pip  # pip 10.0.1
-#   - pip --version  # This does not work
 #   - pip install -r requirements.txt
     - pip install flake8
 # preflight
 before_script:
     # E128 continuation line under-indented for visual indent
-    # E401 multiple imports on one line -- Sometime key to 10 lines or less
-    flake8 . --count --ignore=E128,E401 --max-line-length=127 --statistics  # --exit-zero
+    # E401 multiple imports on one line -- Sometimes key to 10 lines or less
+    flake8 . --count --ignore=E128,E401 --max-line-length=127 --show-source --statistics  # --exit-zero
 # command to run tests
 # script: flake8 .  # nosetests
 script:
@@ -57,4 +41,4 @@ script:
     - ./fake_format.py
 notifications:
     on_success: change
-    on_failure: always
+    on_failure: change
