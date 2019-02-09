@@ -4,6 +4,7 @@
 
 import appex, inspect  # noqa
 
+this_is_an_undefined_name
 
 def main():
     if appex.is_running_extension():
