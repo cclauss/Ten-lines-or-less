@@ -1,8 +1,8 @@
 workflow "New workflow" {
   on = "push"
-  resolves = ["action"]
+  resolves = ["Find Python 3 syntax errors and undefined names"]
 }
 
-action "action" {
+action "Find Python 3 syntax errors and undefined names" {
   uses = "cclauss/Find-Python-syntax-errors-action@master"
 }
