@@ -4,14 +4,14 @@
 
 import console, photos, ui  # noqa
 
-filename = 'my_super_special_image.jpg'
+filename = "my_super_special_image.jpg"
 
 img, metadata = photos.pick_image(include_metadata=True, raw_data=True)
 # import pprint ; pprint.pprint(metadata)
-filename = metadata.get('filename', '').lower() or filename
-with open(filename, 'w') as out_file:
+filename = metadata.get("filename", "").lower() or filename
+with open(filename, "w") as out_file:
     out_file.write(img)
-    console.hud_alert(filename + ' written...')
+    console.hud_alert(filename + " written...")
 view = ui.ImageView()
 view.image = ui.Image.named(filename)
 view.present()

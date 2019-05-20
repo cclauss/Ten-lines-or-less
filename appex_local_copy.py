@@ -11,12 +11,12 @@ def main():
     if appex.is_running_extension():
         attachments = appex.get_attachments()
         assert attachments and attachments[0].rstrip(), "Ain't gots no text!!"
-        fmt = 'from Goodreader_{:%Y_%m_%d_%H_%M_%S}.txt'
+        fmt = "from Goodreader_{:%Y_%m_%d_%H_%M_%S}.txt"
         file_name = fmt.format(datetime.datetime.now())
-        with open(file_name, 'w') as out_file:
+        with open(file_name, "w") as out_file:
             out_file.write(attachments[0])
-        print('{} bytes written to {}.'.format(len(attachments[0]), file_name))
+        print("{} bytes written to {}.".format(len(attachments[0]), file_name))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

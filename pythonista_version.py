@@ -16,15 +16,27 @@ import os, platform, plistlib, scene, sys  # noqa
 
 
 def pythonista_version():  # 2.0.1 (201000)
-    plist = plistlib.readPlist(os.path.abspath(os.path.join(sys.executable,
-                                               '..', 'Info.plist')))
-    return '{CFBundleShortVersionString} ({CFBundleVersion})'.format(**plist)
+    plist = plistlib.readPlist(
+        os.path.abspath(os.path.join(sys.executable, "..", "Info.plist"))
+    )
+    return "{CFBundleShortVersionString} ({CFBundleVersion})".format(**plist)
 
 
 ios_ver, _, machine_model = platform.mac_ver()
-bit = platform.architecture()[0].rstrip('bit') + '-bit'
-rez = '({:.0f} x {:.0f})'.format(*scene.get_screen_size())
-fmt = ('Pythonista version {} running Python {} on iOS {} on a {} {} with a '
-       'screen size of {} * {:.0f}')
-print(fmt.format(pythonista_version(), platform.python_version(), ios_ver,
-                 bit, machine_model, rez, scene.get_screen_scale()))
+bit = platform.architecture()[0].rstrip("bit") + "-bit"
+rez = "({:.0f} x {:.0f})".format(*scene.get_screen_size())
+fmt = (
+    "Pythonista version {} running Python {} on iOS {} on a {} {} with a "
+    "screen size of {} * {:.0f}"
+)
+print(
+    fmt.format(
+        pythonista_version(),
+        platform.python_version(),
+        ios_ver,
+        bit,
+        machine_model,
+        rez,
+        scene.get_screen_scale(),
+    )
+)

@@ -6,18 +6,28 @@ import sqlite3
 
 def sqlite_table_layout(sqlite_connection):
     def row_count_and_column_names(table_name):
-        cursor = sqlite_connection.execute("SELECT * FROM {}".format(table_name))     # noqa
-        return len(cursor.fetchall()), ', '.join(x[0] for x in cursor.description)    # noqa
-    cursor = sqlite_connection.execute("SELECT name FROM sqlite_master WHERE type='table'")  # noqa
-    table_dict = {x[0]: row_count_and_column_names(x[0]) for x in cursor.fetchall()}  # noqa
+        cursor = sqlite_connection.execute(
+            "SELECT * FROM {}".format(table_name)
+        )  # noqa
+        return (
+            len(cursor.fetchall()),
+            ", ".join(x[0] for x in cursor.description),
+        )  # noqa
+
+    cursor = sqlite_connection.execute(
+        "SELECT name FROM sqlite_master WHERE type='table'"
+    )  # noqa
+    table_dict = {
+        x[0]: row_count_and_column_names(x[0]) for x in cursor.fetchall()
+    }  # noqa
     fmt = 'Table "{}" contains {} records with columns:\n      {}'
-    return '\n'.join(fmt.format(x, *table_dict[x]) for x in sorted(table_dict))
+    return "\n".join(fmt.format(x, *table_dict[x]) for x in sorted(table_dict))
 
 
-with sqlite3.connect('my.db') as conn:
+with sqlite3.connect("my.db") as conn:
     print(sqlite_table_layout(conn))
 
-'''
+"""
 Table "area_metadata" contains 10 records with columns:
       area_id, name, json_value
 Table "block" contains 7 records with columns:
@@ -41,4 +51,4 @@ Table "trip" contains 648 records with columns:
       route_id, service_id, id, headsign, block_id
 Table "version" contains 9 records with columns:
       id, releaseDate, description
-'''
+"""

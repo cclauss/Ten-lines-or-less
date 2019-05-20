@@ -4,9 +4,9 @@ import dropboxlogin
 import os
 import tarfile
 
-tar_file_name = 'my_archive.tar'
+tar_file_name = "my_archive.tar"
 
-with tarfile.open(tar_file_name, 'w') as out_file:
+with tarfile.open(tar_file_name, "w") as out_file:
     # add this script at the root of the tarball
     out_file.add(os.path.basename(__file__))
 

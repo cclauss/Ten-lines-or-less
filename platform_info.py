@@ -2,13 +2,13 @@ import inspect
 import platform
 
 for name, value in inspect.getmembers(platform):
-    if name[0] != '_' and callable(value):
+    if name[0] != "_" and callable(value):
         try:
             value = value()
         except (IndexError, TypeError):
             continue
         if str(value).strip("(),' "):
-            print('{:>21}() = {}'.format(name, value))
+            print("{:>21}() = {}".format(name, value))
 
 # import sys
 # print(sys.platform, sys.version)
@@ -26,10 +26,15 @@ python_implementation() = CPython
  python_version_tuple() = ('3', '6', '1')
               release() = 17.0.0
                system() = Darwin
-                uname() = uname_result(system='Darwin', node='CCC-iPad', release='17.0.0',
-                                       version='Darwin Kernel Version 17.0.0: Fri Sep  1 14:59:13 PDT 2017; '
-                                       'root:xnu-4570.2.5~167/RELEASE_ARM64_T7001', machine='iPad5,4', processor='')
-              version() = ('Darwin Kernel Version 17.0.0: Fri Sep  1 14:59:13 PDT 2017; '
+                uname() = uname_result(system='Darwin', node='CCC-iPad',
+                                       release='17.0.0',
+                                       version='Darwin Kernel Version 17.0.0: '
+                                               'Fri Sep  1 14:59:13 PDT 2017; '
+                                               'root:xnu-4570.2.5~167/'
+                                               'RELEASE_ARM64_T7001',
+                                       machine='iPad5,4', processor='')
+              version() = ('Darwin Kernel Version 17.0.0: '
+                           'Fri Sep  1 14:59:13 PDT 2017; '
                            'root:xnu-4570.2.5~167/RELEASE_ARM64_T7001')
 
 ios 3.6.1 (default, Aug 24 2017, 16:20:00)

@@ -3,13 +3,13 @@
 # Inspired by https://pythonclock.org
 
 from datetime import date, timedelta
-print((date(2020, 1, 1) - date.today()).days,
-      'days until Python 2 end of life.')
+
+print((date(2020, 1, 1) - date.today()).days, "days until Python 2 end of life.")
 
 
 def daze_left(days=500):
     d = date(2020, 1, 1) - timedelta(days=days)
-    return f'On {d} there will be {days} days until Python 2 end of life.'
+    return f"On {d} there will be {days} days until Python 2 end of life."
 
 
 for days in (600, 500, 400, 300, 250, 200, 100):

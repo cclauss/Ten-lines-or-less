@@ -6,14 +6,16 @@
 def omz_env():
     try:
         import workflow  # noqa
-        return 'Editorial'
+
+        return "Editorial"
     except ImportError:
         try:
             import scene  # noqa
-            return 'Pythonista'
+
+            return "Pythonista"
         except ImportError:
             return None
 
 
 env = omz_env()
-print('Yeah!! ' + env if env else 'Sublime or other non-OMZ Software platform')
+print("Yeah!! " + env if env else "Sublime or other non-OMZ Software platform")
