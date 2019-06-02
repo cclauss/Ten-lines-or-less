@@ -32,9 +32,9 @@ install:
     - pip install flake8
 # preflight
 before_script:
-    # E128 continuation line under-indented for visual indent
     # E401 multiple imports on one line -- Sometimes key to 10 lines or less
-    flake8 . --count --ignore=E128,E401 --max-line-length=127 --show-source --statistics  # --exit-zero
+    # W503 line break before binary operator
+    flake8 . --count --ignore=E401,W503 --max-line-length=127 --show-source --statistics  # --exit-zero
 # command to run tests
 # script: flake8 .  # nosetests
 script:
