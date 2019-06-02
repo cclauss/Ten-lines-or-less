@@ -12,7 +12,7 @@ def daze_left(days=500):
     return f"On {d} there will be {days} days until Python 2 end of life."
 
 
-for days in (600, 500, 400, 300, 250, 200, 100):
+for days in (200, 150, 100, 50):
     print(daze_left(days=days))
 
 """
