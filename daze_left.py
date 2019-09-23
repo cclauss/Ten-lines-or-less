@@ -7,12 +7,12 @@ from datetime import date, timedelta
 print((date(2020, 1, 1) - date.today()).days, "days until Python 2 end of life.")
 
 
-def daze_left(days=500):
+def daze_left(days=100):
     d = date(2020, 1, 1) - timedelta(days=days)
     return f"On {d} there will be {days} days until Python 2 end of life."
 
 
-for days in (200, 150, 100, 50):
+for days in (100, 75, 50, 25):
     print(daze_left(days=days))
 
 """
