@@ -1,0 +1,10 @@
+on: push
+name: New workflow
+jobs:
+  findPython3SyntaxErrorsAndUndefinedNames:
+    name: Find Python 3 syntax errors and undefined names
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Find Python 3 syntax errors and undefined names
+      uses: cclauss/Find-Python-syntax-errors-action@master
