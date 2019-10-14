@@ -1,11 +1,6 @@
 group: travis_latest
 language: python
-matrix:
-  allow_failures:
-    - python: 2.7
-  include:
-    - python: 2.7
-    - python: 3.7
+python: 3.8
 # command to install dependencies
 install:
     - pip install --upgrade pip  # pip 10.0.1
