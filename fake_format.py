@@ -40,7 +40,7 @@ Three weeks before that date, we will send a replacement card to your address:
 {street_address}
 {city}, {state_abbr}  {postalcode_plus4}
 
-    Yours truely,
+    Yours truly,
         {name}
         {credit_card_provider}
 """
