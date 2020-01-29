@@ -4,7 +4,7 @@
 
 import string, ui  # noqa
 
-text = string.letters * 5
+text = string.ascii_letters * 5
 
 scroll_view = ui.ScrollView()
 text_view = ui.TextView()
