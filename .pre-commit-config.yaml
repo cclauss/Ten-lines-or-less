@@ -23,5 +23,8 @@ repos:
     hooks:
       - id: flake8
         args:
+          - --ignore=E401,W503
           - --max-complexity=10
           - --max-line-length=88
+          # E401 multiple imports on one line -- Sometimes key to 10 lines or less
+          # W503 line break before binary operator
