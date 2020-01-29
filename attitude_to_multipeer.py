@@ -13,7 +13,7 @@ https://github.com/mikaelho/multipeer
 
 import motion, multipeer, platform
 
-mc = multipeer.MultipeerConnectivity(display_name=platform.node(), service_type='chat')
+mc = multipeer.MultipeerConnectivity(display_name=platform.node(), service_type="chat")
 motion.start_updates()
 try:
     while True:
