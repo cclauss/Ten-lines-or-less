@@ -1,18 +1,15 @@
-group: travis_latest
+os: linux
+dist: focal
 language: python
-python: 3.8
-# command to install dependencies
+python: 3.9
 install:
-    - pip install --upgrade pip  # pip 10.0.1
-#   - pip install -r requirements.txt
+    - pip install --upgrade pip
+    - pip install -r requirements.txt || true
     - pip install flake8
-# preflight
 before_script:
     # E401 multiple imports on one line -- Sometimes key to 10 lines or less
     # W503 line break before binary operator
-    flake8 . --count --ignore=E401,W503 --max-line-length=127 --show-source --statistics  # --exit-zero
-# command to run tests
-# script: flake8 .  # nosetests
+    flake8 . --count --ignore=E401,W503 --max-line-length=127 --show-source --statistics
 script:
     - pip install Faker
     - chmod +x *.py
