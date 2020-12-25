@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 from datetime import datetime
-from typing import Tuple
 
 
 def ask_month_day_year(prompt: str = "Enter your birthday"):
