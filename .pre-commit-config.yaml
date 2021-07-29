@@ -34,6 +34,7 @@ repos:
         # have access to those. To change the arguments, override the
         # args as follows:
         # args: [--no-strict-optional, --ignore-missing-imports]
+        additional_dependencies: [types-requests]
   #- repo: https://github.com/pytest-dev/pytest
   #  rev: 5.3.4
   #  hooks:
