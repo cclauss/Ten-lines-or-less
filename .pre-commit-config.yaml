@@ -1,16 +1,16 @@
 repos:
   - repo: https://github.com/python/black
-    rev: stable
+    rev: 21.7b0
     hooks:
       - id: black
   - repo: https://github.com/codespell-project/codespell
-    rev: master
+    rev: v2.1.0
     hooks:
       - id: codespell
         args:
           - --quiet-level=2
   - repo: https://gitlab.com/pycqa/flake8
-    rev: 3.8.4
+    rev: 3.9.2
     hooks:
       - id: flake8
         args:
@@ -26,7 +26,7 @@ repos:
   #      args:
   #        - --recursive
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: master
+    rev: v0.910
     hooks:
       - id: mypy
         # By default, mypy will run with mypy --ignore-missing-imports,
