@@ -1,4 +1,3 @@
-# coding: utf-8
 # See: https://forum.omz-software.com/topic/2953/calendar-view-class
 
 import calendar, datetime, ui  # noqa
