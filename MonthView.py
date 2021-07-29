@@ -2,6 +2,7 @@
 
 import calendar, datetime, ui  # noqa
 
+
 class MonthView(ui.View):
     def __init__(self, in_date=None):
         self.name = "{0:%B %Y}".format(in_date or datetime.date.today())
