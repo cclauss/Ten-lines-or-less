@@ -1,7 +1,7 @@
-# coding: utf-8
 # See: https://forum.omz-software.com/topic/2953/calendar-view-class
 
 import calendar, datetime, ui  # noqa
+
 
 class MonthView(ui.View):
     def __init__(self, in_date=None):
