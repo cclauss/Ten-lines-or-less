@@ -1,5 +1,5 @@
 repos:
-  - repo: https://github.com/python/black
+  - repo: https://github.com/psf/black
     rev: 21.7b0
     hooks:
       - id: black
@@ -9,7 +9,7 @@ repos:
       - id: codespell
         args:
           - --quiet-level=2
-  - repo: https://gitlab.com/pycqa/flake8
+  - repo: https://github.com/PyCQA/flake8
     rev: 3.9.2
     hooks:
       - id: flake8
