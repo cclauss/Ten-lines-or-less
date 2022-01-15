@@ -15,7 +15,7 @@ if __name__ == "__main__":
     # measure the speed of two ways to create a dict
     with timer("dict = {}"):
         for _ in range(10_000_000):
-            d: {}
+            d: {}  # type: ignore
     with timer("dict = dict()"):  # takes ~50% longer than {}
         for _ in range(10_000_000):
             d = dict()
