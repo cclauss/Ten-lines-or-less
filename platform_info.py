@@ -10,6 +10,16 @@ for name, value in inspect.getmembers(platform):
         if str(value).strip("(),' "):
             print("{:>21}() = {}".format(name, value))
 
+# ==== Update... 
+info = {}
+for name, func in inspect.getmembers(platform):
+    try:
+        if name[0] != "_":
+            info[name] = str(func() or "").strip("(),' ")
+    except (FileNotFoundError, TypeError):
+        continue
+print("\n".join(f"{name:>21}() = {value}" for name, value in info.items() if value))
+
 # import sys
 # print(sys.platform, sys.version)
 
