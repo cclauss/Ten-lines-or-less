@@ -10,7 +10,7 @@ for name, value in inspect.getmembers(platform):
         if str(value).strip("(),' "):
             print("{:>21}() = {}".format(name, value))
 
-# ==== Update... 
+# ==== Update...
 info = {}
 for name, func in inspect.getmembers(platform):
     try:
