@@ -26,7 +26,7 @@ repos:
   #      args:
   #        - --recursive
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v0.960
+    rev: v0.961
     hooks:
       - id: mypy
         # By default, mypy will run with mypy --ignore-missing-imports,
