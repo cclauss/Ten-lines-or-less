@@ -1,0 +1,12 @@
+name: trending_python
+on:
+  workflow_dispatch:
+jobs:
+  trending_python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - run: python trending_python.py
