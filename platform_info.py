@@ -41,10 +41,14 @@ python_implementation() = CPython
                               system='Darwin',
                               node='christians-m1-macbook-pro.home',
                               release='22.2.0',
-                              version='Darwin Kernel Version 22.2.0: Fri Nov 11 02:04:44 PST 2022; root:xnu-8792.61.2~4/RELEASE_ARM64_T8103',
+                              version=(
+                           'Darwin Kernel Version 22.2.0: Fri Nov 11 02:04:44 PST 2022;'
+                           'root:xnu-8792.61.2~4/RELEASE_ARM64_T8103'
+                              ),
                               machine='arm64
                           )
-              version() = Darwin Kernel Version 22.2.0: Fri Nov 11 02:04:44 PST 2022; root:xnu-8792.61.2~4/RELEASE_ARM64_T8103
+              version() = Darwin Kernel Version 22.2.0: Fri Nov 11 02:04:44 PST 2022;
+                          root:xnu-8792.61.2~4/RELEASE_ARM64_T8103
 
 ios 3.6.1 (default, Aug 24 2017, 16:20:00)
 [GCC 4.2.1 Compatible Apple LLVM 8.1.0 (clang-802.0.42)]
