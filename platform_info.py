@@ -5,10 +5,12 @@ for name, value in inspect.getmembers(platform):
     if name[0] != "_" and callable(value):
         try:
             value = value()
-        except (IndexError, TypeError):
+        except (OSError, TypeError):
             continue
         if str(value).strip("(),' "):
             print("{:>21}() = {}".format(name, value))
+
+print("=" * 40)
 
 # ==== Update...
 info = {}
@@ -16,9 +18,10 @@ for name, func in inspect.getmembers(platform):
     try:
         if name[0] != "_":
             info[name] = str(func() or "").strip("(),' ")
-    except (FileNotFoundError, TypeError):
+    except (OSError, TypeError):
         pass
 print("\n".join(f"{name:>21}() = {value}" for name, value in info.items() if value))
+
 
 # import sys
 # print(sys.platform, sys.version)
