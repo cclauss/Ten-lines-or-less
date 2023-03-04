@@ -5,28 +5,16 @@ def set_theory(abc, ac, cde):
     print(f"Set difference:       abc - cde --> {sorted(abc - cde)}")
     print(f"Symmetric difference: abc ^ cde --> {sorted(abc ^ cde)}")
     print(
-        "Is suubset:           ac <= abc, abc <= abc --> {}, {}".format(
-            ac <= abc,
-            abc <= abc,
-        ),
+        f"Is suubset:           ac <= abc, abc <= abc --> {ac <= abc}, {abc <= abc}",
     )
     print(
-        "Is superset:          abc >= ac, abc >= abc --> {}, {}".format(
-            abc >= ac,
-            abc >= abc,
-        ),
+        f"Is superset:          abc >= ac, abc >= abc --> {abc >= ac}, {abc >= abc}",
     )
     print(
-        "Is proper suubset:    ac  < abc, abc <  abc --> {}, {}".format(
-            ac < abc,
-            abc < abc,
-        ),
+        f"Is proper suubset:    ac  < abc, abc <  abc --> {ac < abc}, {abc < abc}",
     )
     print(
-        "Is proper superset:   abc >  ac, abc >  abc --> {}, {}".format(
-            abc > ac,
-            abc > abc,
-        ),
+        f"Is proper superset:   abc >  ac, abc >  abc --> {abc > ac}, {abc > abc}",
     )
 
 
