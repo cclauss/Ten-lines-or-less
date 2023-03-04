@@ -31,9 +31,10 @@ def get_dict_from_table(sqlite_connection, table_name, key_col_name="id"):
     useful for tables where each row has a unique primary key."""
     the_list = get_list_from_table(sqlite_connection, table_name)
     the_dict = {row._asdict()[key_col_name]: row for row in the_list}
-    assert len(the_dict) == len(
-        the_list
-    ), f"In {table_name}, {key_col_name} is not unique: {len(the_dict)} {len(the_list)}"
+    assert len(the_dict) == len(the_list), (
+        f"In {table_name}, {key_col_name} is not unique: "
+        f"{len(the_dict)} {len(the_list)}"
+    )
     return the_dict
 
 
@@ -50,9 +51,10 @@ def get_employee_dict():
 services = get_services()
 employee_dict = get_employee_dict()
 
-for dataset in [services, employee_dict]:
-    if isinstance(dataset, dict):
-        print("\n".join(str(row) for row in dataset.values()))
-    else:
-        print("\n".join(str(row) for row in dataset))
+for data in (services, employee_dict):
+    print(
+        "\n".join(
+            str(row) for row in (data.values() if isinstance(data, dict) else data)
+        )
+    )
     print("")
