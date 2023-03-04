@@ -1,5 +1,3 @@
-# coding: utf-8
-
 import collections, dialogs  # noqa
 
 """simplify the creation of simple form_dialogs"""
@@ -7,7 +5,8 @@ import collections, dialogs  # noqa
 
 def form_dialog_from_fields_dict(title, fields_dict):
     return dialogs.form_dialog(
-        title, [{"title": k, "type": v} for k, v in fields_dict.iteritems()]
+        title,
+        [{"title": k, "type": v} for k, v in fields_dict.iteritems()],
     )
 
 
@@ -25,7 +24,7 @@ my_fields_dict = collections.OrderedDict(
         ("datetime", "datetime"),
         ("date", "date"),
         ("time", "time"),
-    )
+    ),
 )
 
 print(form_dialog_from_fields_dict("My form dialog", my_fields_dict))

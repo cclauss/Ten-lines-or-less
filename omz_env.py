@@ -1,5 +1,3 @@
-# coding: utf-8
-
 # See: https://forum.omz-software.com/topic/2135/telling-if-i-m-pythonista-or-editorial-or-sublime-text-or-whatever  # noqa
 
 

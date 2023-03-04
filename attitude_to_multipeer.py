@@ -1,5 +1,4 @@
-"""
-Send a stream of pitch, yaw, roll values to other devices on a multipeer network.
+"""Send a stream of pitch, yaw, roll values to other devices on a multipeer network.
 Uses Pythonista's motion.get_attitude() to get data and @mikaelho's multipeer to send.
 Install multipeer on two iOS devices and run this code on one and multipeer.py on the
 other.  You should see a stream of attitude data which change as the device is moved.
@@ -11,7 +10,10 @@ http://omz-software.com/pythonista/docs/ios/motion.html
 https://github.com/mikaelho/multipeer
 """
 
-import motion, multipeer, platform
+import platform
+
+import motion
+import multipeer
 
 mc = multipeer.MultipeerConnectivity(display_name=platform.node(), service_type="chat")
 motion.start_updates()

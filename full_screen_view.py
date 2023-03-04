@@ -4,11 +4,12 @@
 # press and hold for one second or more to add a '-' to the title
 
 from datetime import datetime as dt
+
 import ui
 
 
 class FullScreenButtonView(ui.View):
-    def __init__(self):
+    def __init__(self) -> None:
         self.name = ""
 
     def touch_began(self, touch):

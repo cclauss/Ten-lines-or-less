@@ -19,10 +19,11 @@ import os, platform, plistlib, scene, sys  # noqa
 
 def pythonista_version():  # 2.0.1 (201000) or 3.4 (340006)
     with open(
-        os.path.abspath(os.path.join(sys.executable, "..", "Info.plist")), "rb"
+        os.path.abspath(os.path.join(sys.executable, "..", "Info.plist")),
+        "rb",
     ) as in_file:
         return "{CFBundleShortVersionString} ({CFBundleVersion})".format(
-            **plistlib.load(in_file)
+            **plistlib.load(in_file),
         )
 
 
@@ -42,5 +43,5 @@ print(
         machine_model,
         rez,
         scene.get_screen_scale(),
-    )
+    ),
 )

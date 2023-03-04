@@ -9,22 +9,12 @@ repos:
       - id: codespell
         args:
           - --quiet-level=2
-  - repo: https://github.com/PyCQA/flake8
-    rev: 6.0.0
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.0.254
     hooks:
-      - id: flake8
+      - id: ruff
         args:
-          - --ignore=E401,W503
-          - --max-complexity=10
-          - --max-line-length=88
-          # E401 multiple imports on one line -- Sometimes key to 10 lines or less
-          # W503 line break before binary operator
-  #- repo: https://github.com/timothycrosley/isort
-  #  rev: 4.3.21-2
-  #  hooks:
-  #    - id: isort
-  #      args:
-  #        - --recursive
+          - --select=A,B,C,E,F,I,PL,RUF,UP,W
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.0.1
     hooks:
@@ -35,7 +25,3 @@ repos:
         # args as follows:
         # args: [--no-strict-optional, --ignore-missing-imports]
         additional_dependencies: [types-requests]
-  #- repo: https://github.com/pytest-dev/pytest
-  #  rev: 5.3.4
-  #  hooks:
-  #    - id: pytest

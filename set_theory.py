@@ -1,29 +1,21 @@
 def set_theory(abc, ac, cde):
-    print("abc: {}\n ac: {}\ncde: {}".format(sorted(abc), sorted(ac), sorted(cde)))
-    print("Union:                abc | cde --> {}".format(sorted(abc | cde)))
-    print("Intersection:         abc & cde --> {}".format(sorted(abc & cde)))
-    print("Set difference:       abc - cde --> {}".format(sorted(abc - cde)))
-    print("Symmetric difference: abc ^ cde --> {}".format(sorted(abc ^ cde)))
+    print(f"abc: {sorted(abc)}\n ac: {sorted(ac)}\ncde: {sorted(cde)}")
+    print(f"Union:                abc | cde --> {sorted(abc | cde)}")
+    print(f"Intersection:         abc & cde --> {sorted(abc & cde)}")
+    print(f"Set difference:       abc - cde --> {sorted(abc - cde)}")
+    print(f"Symmetric difference: abc ^ cde --> {sorted(abc ^ cde)}")
     print(
-        "Is suubset:           ac <= abc, abc <= abc --> {}, {}".format(
-            ac <= abc, abc <= abc
-        )
-    )  # noqa
+        f"Is suubset:           ac <= abc, abc <= abc --> {ac <= abc}, {abc <= abc}",
+    )
     print(
-        "Is superset:          abc >= ac, abc >= abc --> {}, {}".format(
-            abc >= ac, abc >= abc
-        )
-    )  # noqa
+        f"Is superset:          abc >= ac, abc >= abc --> {abc >= ac}, {abc >= abc}",
+    )
     print(
-        "Is proper suubset:    ac  < abc, abc <  abc --> {}, {}".format(
-            ac < abc, abc < abc
-        )
-    )  # noqa
+        f"Is proper suubset:    ac  < abc, abc <  abc --> {ac < abc}, {abc < abc}",
+    )
     print(
-        "Is proper superset:   abc >  ac, abc >  abc --> {}, {}".format(
-            abc > ac, abc > abc
-        )
-    )  # noqa
+        f"Is proper superset:   abc >  ac, abc >  abc --> {abc > ac}, {abc > abc}",
+    )
 
 
 if __name__ == "__main__":
