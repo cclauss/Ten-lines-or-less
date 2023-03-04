@@ -5,15 +5,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v3
-      - run: pip install bandit black codespell flake8 isort mypy pytest pyupgrade
-      - run: bandit -r . || true
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - run: pip install --upgrade pip ruff setuptools wheel
+      - name: "Ruff: Show stopper (must-fix) issues"
+        run: ruff . --select=E9,F63,F7,F82,PLE,YTT --show-source .
+      - name: "Ruff: All issues and all fixable (ruff --fix) issues"
+        run: |
+          ruff check --select=ALL --statistics --target-version=py37 . | tee ruff.out.txt || true
+          echo "------- all fixable (ruff --fix) issues -------"
+          grep "\[\*\]" ruff.out.txt      
+      - run: pip install black codespell mypy pytest safety
       - run: black --check . || true
-      - run: codespell --quiet-level=2 || true  # --ignore-words-list="" --skip=""
-      - run: flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-      - run: isort --check-only --profile black . || true
-      - run: pip install -r requirements.txt || true
-      - run: mypy --ignore-missing-imports . || true
+      - run: codespell || true  # --ignore-words-list="" --skip="*.css,*.js,*.lock"
+      - run: pip install -r requirements.txt || pip install --editable . || pip install . || true
+      - run: mkdir --parents --verbose .mypy_cache
+      - run: mypy --ignore-missing-imports --install-types --non-interactive . || true
       - run: pytest . || true
       - run: pytest --doctest-modules . || true
-      - run: shopt -s globstar && pyupgrade --py36-plus **/*.py || true
+      - run: safety check
