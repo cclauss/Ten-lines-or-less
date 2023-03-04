@@ -12,7 +12,7 @@
 import os
 
 
-def cd(in_dir=os.path.expanduser("~")):
+def cd(in_dir=os.path.expanduser("~")):  # noqa: B008
     os.chdir(in_dir)
     print(os.path.abspath(os.curdir))
 

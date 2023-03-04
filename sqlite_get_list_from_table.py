@@ -1,4 +1,3 @@
-
 """Useful tools for reading sqlite database tables into Python data structures.
 Each row of your database table is converted into a namedtuple with fieldnames
 taken from the sqlite table definition.  Using the namedtuple._asdict() method
@@ -36,7 +35,10 @@ def get_dict_from_table(sqlite_connection, table_name, key_col_name="id"):
     the_dict = {row._asdict()[key_col_name]: row for row in the_list}
     fmt = "In {}, {} is not unique: {} {}"
     assert len(the_dict) == len(the_list), fmt.format(
-        table_name, key_col_name, len(the_dict), len(the_list),
+        table_name,
+        key_col_name,
+        len(the_dict),
+        len(the_list),
     )
     return the_dict
 

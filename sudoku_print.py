@@ -1,5 +1,3 @@
-
-
 def border_line():
     return ("=" * 7).join("+" * 4)
 

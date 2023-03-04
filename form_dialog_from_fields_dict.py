@@ -1,4 +1,3 @@
-
 import collections, dialogs  # noqa
 
 """simplify the creation of simple form_dialogs"""
@@ -6,7 +5,8 @@ import collections, dialogs  # noqa
 
 def form_dialog_from_fields_dict(title, fields_dict):
     return dialogs.form_dialog(
-        title, [{"title": k, "type": v} for k, v in fields_dict.iteritems()],
+        title,
+        [{"title": k, "type": v} for k, v in fields_dict.iteritems()],
     )
 
 

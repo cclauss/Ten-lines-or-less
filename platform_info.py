@@ -4,7 +4,7 @@ import platform
 for name, value in inspect.getmembers(platform):
     if name[0] != "_" and callable(value):
         try:
-            value = value()
+            value = value()  # noqa: PLW2901
         except (OSError, TypeError):
             continue
         if str(value).strip("(),' "):

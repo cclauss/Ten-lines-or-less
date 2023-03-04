@@ -1,4 +1,3 @@
-
 # https://forum.omz-software.com/topic/2943/trying-to-make-an-encrypted-message-system
 # a poor man's encryption
 

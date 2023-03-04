@@ -1,4 +1,3 @@
-
 import collections, objc_util  # noqa
 
 battery_info = collections.namedtuple("battery_info", "level state")
@@ -10,7 +9,8 @@ def get_battery_info():
     device.setBatteryMonitoringEnabled_(True)
     try:
         return battery_info(
-            int(device.batteryLevel() * 100), battery_states[device.batteryState()],
+            int(device.batteryLevel() * 100),
+            battery_states[device.batteryState()],
         )
     finally:
         device.setBatteryMonitoringEnabled_(False)

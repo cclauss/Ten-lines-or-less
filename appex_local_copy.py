@@ -1,4 +1,3 @@
-
 # Make a local copy of the text file passed in via a share sheet.
 
 # See: https://forum.omz-software.com/topic/2637/is-it-possible-to-read-a-file-say-txt-file-from-other-app  # noqa

@@ -1,4 +1,3 @@
-
 # See: https://forum.omz-software.com/topic/2358/appex-safari-content
 
 import appex, inspect  # noqa
