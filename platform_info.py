@@ -8,7 +8,7 @@ for name, value in inspect.getmembers(platform):
         except (OSError, TypeError):
             continue
         if str(value).strip("(),' "):
-            print("{:>21}() = {}".format(name, value))
+            print(f"{name:>21}() = {value}")
 
 print("=" * 40)
 

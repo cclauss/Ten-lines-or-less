@@ -1,4 +1,6 @@
-import location, requests, speech
+import location
+import requests
+import speech
 
 loc = location.reverse_geocode(location.get_location())
 city_country = "{City},{Country}".format(**loc[0])

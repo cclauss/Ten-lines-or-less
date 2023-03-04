@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# coding: utf-8
 
 # Pythonista appex script to copy and unpack a repo zipfile from GitHub
 
@@ -23,5 +22,5 @@ else:  # Error handling...
 * Tap 'Open in...'.
 * Tap 'Run Pythonista Script'.
 * Pick this script and tap the run button.
-* When you return to Pythonista the files should be in '~/from GitHub/'."""
+* When you return to Pythonista the files should be in '~/from GitHub/'.""",
     )

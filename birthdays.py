@@ -1,5 +1,4 @@
-"""
-Prints a list of birthdays in your address book (in days from now).
+"""Prints a list of birthdays in your address book (in days from now).
 
 NOTE: This script requires access to your contacts in order to work.
 """
@@ -23,10 +22,10 @@ text = "\n".join(
         ),
         key=lambda x: x["days"],
     )
-)  # noqa
+)
 
 print(
     "Upcoming Birthdays:\n{}\n{}".format("=" * 19, text)
     if text
-    else "You don't have any birthdays in your address book."
-)  # noqa
+    else "You don't have any birthdays in your address book.",
+)

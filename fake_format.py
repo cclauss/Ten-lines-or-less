@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# coding: utf-8
 
 from faker import Faker
 
@@ -43,6 +42,6 @@ Three weeks before that date, we will send a replacement card to your address:
     Yours truly,
         {name}
         {credit_card_provider}
-"""
-    )
+""",
+    ),
 )

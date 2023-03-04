@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 
-class MyClass(object):
-    def __init__(self):
+class MyClass:
+    def __init__(self) -> None:
         self.my_function()
 
     def my_function(self):

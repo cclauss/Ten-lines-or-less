@@ -14,15 +14,14 @@ def timer(name="timer"):
 
 @contextmanager
 def elapsed_time(name="elapsed_time"):
-    """
-    Two ways to use elapsed_time():
+    """Two ways to use elapsed_time():
     1. As a decorator to time the execution of an entire function:
         @elapsed_time("my_slow_function")
         def my_slow_function(n=10_000_000):
             pass
     2. As a context manager to time the execution of a block of code inside a function:
         with elapsed_time("my_slow_block_of_code"):
-            pass
+            pass.
     """
     start = perf_counter()
     yield
@@ -36,4 +35,4 @@ if __name__ == "__main__":
             d: {}  # type: ignore
     with timer("dict = dict()"):  # takes ~50% longer than {}
         for _ in range(10_000_000):
-            d = dict()
+            d = {}

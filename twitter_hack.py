@@ -1,4 +1,3 @@
-# coding: utf-8
 
 # See: https://forum.omz-software.com/topic/2794/old-bugs/19
 
@@ -12,7 +11,7 @@ ________________________>"""
 
 def perform_search():
     data = twitter.search(
-        account, "Privacy OR Apple from:RepTedLieu", parameters={"result_type": "mixed"}
+        account, "Privacy OR Apple from:RepTedLieu", parameters={"result_type": "mixed"},
     )
     print("\n".join(fmt.format(**status) for status in data["statuses"]))
 
