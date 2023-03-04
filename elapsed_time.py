@@ -22,7 +22,8 @@ def elapsed_time(name="elapsed_time"):
     2. As a context manager to time the execution of a block of code inside a function:
         with elapsed_time("my_slow_block_of_code"):
             pass
-        ."""
+    .
+    """
     start = perf_counter()
     yield
     print(f"Elapsed time ({name}): {perf_counter() - start:0.8} seconds")
