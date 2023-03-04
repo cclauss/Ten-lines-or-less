@@ -6,9 +6,7 @@ import os
 
 def files_and_folders(dir_path="."):
     """Return a dict containing a sorted tuple of files and a sorted
-    tuple of folders
-    .
-    """
+    tuple of folders."""
     f_and_f = os.listdir(dir_path)
     folders = [f for f in f_and_f if os.path.isdir(os.path.abspath(f))]
     files = set(f_and_f) - set(folders)

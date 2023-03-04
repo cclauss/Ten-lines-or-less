@@ -5,13 +5,8 @@ import sqlite3
 
 def sqlite_table_layout(sqlite_connection):
     def row_count_and_column_names(table_name):
-        cursor = sqlite_connection.execute(
-            f"SELECT * FROM {table_name}",
-        )
-        return (
-            len(cursor.fetchall()),
-            ", ".join(x[0] for x in cursor.description),
-        )
+        cursor = sqlite_connection.execute(f"SELECT * FROM {table_name}")
+        return (len(cursor.fetchall()), ", ".join(x[0] for x in cursor.description))
 
     cursor = sqlite_connection.execute(
         "SELECT name FROM sqlite_master WHERE type='table'",
