@@ -17,6 +17,11 @@
 import os, platform, plistlib, scene, sys  # noqa
 
 
+def pythonista_version_info():  # ('3', '4')
+    info_plist = (Path(sys.executable).parent / "Info.plist").read_bytes()
+    return tuple(plistlib.loads(info_plist)["CFBundleShortVersionString"].split("."))
+
+
 def pythonista_version():  # 2.0.1 (201000) or 3.4 (340006)
     with open(
         os.path.abspath(os.path.join(sys.executable, "..", "Info.plist")),
