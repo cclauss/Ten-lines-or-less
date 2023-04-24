@@ -15,6 +15,7 @@
 # https://forum.omz-software.com/topic/2444/determining-pythonista-s-version/3
 
 import os, platform, plistlib, scene, sys  # noqa
+from pathlib import Path
 
 
 def pythonista_version_info():  # ('3', '4')
