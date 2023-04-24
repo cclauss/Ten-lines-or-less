@@ -23,13 +23,10 @@ def pythonista_version_info():  # ('3', '4')
 
 
 def pythonista_version():  # 2.0.1 (201000) or 3.4 (340006)
-    with open(
-        os.path.abspath(os.path.join(sys.executable, "..", "Info.plist")),
-        "rb",
-    ) as in_file:
-        return "{CFBundleShortVersionString} ({CFBundleVersion})".format(
-            **plistlib.load(in_file),
-        )
+    info_plist = (Path(sys.executable).parent / "Info.plist").read_bytes()
+    return "{CFBundleShortVersionString} ({CFBundleVersion})".format(
+        **plistlib.loads(info_plist),
+    )
 
 
 ios_ver, _, machine_model = platform.mac_ver()
