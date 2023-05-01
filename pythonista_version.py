@@ -17,8 +17,7 @@
 import platform, plistlib, scene, sys  # noqa
 from pathlib import Path
 
-plist_path = Path(sys.executable).resolve().parent / "Info.plist"
-info_plist = plistlib.loads(plist_path.read_bytes())
+info_plist = plistlib.loads((Path(sys.executable).parent / "Info.plist").read_bytes())
 
 
 def pythonista_version_info():  # ('3', '4')
