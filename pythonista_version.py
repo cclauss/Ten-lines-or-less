@@ -14,20 +14,19 @@
 # built on:
 # https://forum.omz-software.com/topic/2444/determining-pythonista-s-version/3
 
-import os, platform, plistlib, scene, sys  # noqa
+import platform, plistlib, scene, sys  # noqa
 from pathlib import Path
+
+plist_path = Path(sys.executable).resolve().parent / "Info.plist"
+info_plist = plistlib.loads(plist_path.read_bytes())
 
 
 def pythonista_version_info():  # ('3', '4')
-    info_plist = (Path(sys.executable).parent / "Info.plist").read_bytes()
-    return tuple(plistlib.loads(info_plist)["CFBundleShortVersionString"].split("."))
+    return tuple(info_plist["CFBundleShortVersionString"].split("."))
 
 
 def pythonista_version():  # 2.0.1 (201000) or 3.4 (340006)
-    info_plist = (Path(sys.executable).parent / "Info.plist").read_bytes()
-    return "{CFBundleShortVersionString} ({CFBundleVersion})".format(
-        **plistlib.loads(info_plist),
-    )
+    return "{CFBundleShortVersionString} ({CFBundleVersion})".format(**info_plist)
 
 
 ios_ver, _, machine_model = platform.mac_ver()
