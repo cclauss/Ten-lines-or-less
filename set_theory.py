@@ -20,7 +20,7 @@ def set_theory(abc, ac, cde):
 
 if __name__ == "__main__":
     # --> ['a', 'b', c'] with duplicate c's will be thrown away
-    abc = {"a", "b", "c", "c", "c"}
+    abc = {"a", "b", "c", "c", "c"}  # noqa: PLW0130
     ac = abc - {"b"}  # --> ['a', 'c'] with 'b' removed
     cde = {"c", "d", "e"}
     set_theory(abc, ac, cde)
