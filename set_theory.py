@@ -4,17 +4,17 @@ def set_theory(abc, ac, cde):
     print(f"Intersection:         abc & cde --> {sorted(abc & cde)}")
     print(f"Set difference:       abc - cde --> {sorted(abc - cde)}")
     print(f"Symmetric difference: abc ^ cde --> {sorted(abc ^ cde)}")
-    print(
+    print(  # noqa: PLR0124
         f"Is suubset:           ac <= abc, abc <= abc --> {ac <= abc}, {abc <= abc}",
     )
     print(
         f"Is superset:          abc >= ac, abc >= abc --> {abc >= ac}, {abc >= abc}",
+    )  # noqa: PLR0124
+    print(
+        f"Is proper suubset:    ac  < abc, abc <  abc --> {ac < abc}, {abc < abc}",  # noqa: PLR0124
     )
     print(
-        f"Is proper suubset:    ac  < abc, abc <  abc --> {ac < abc}, {abc < abc}",
-    )
-    print(
-        f"Is proper superset:   abc >  ac, abc >  abc --> {abc > ac}, {abc > abc}",
+        f"Is proper superset:   abc >  ac, abc >  abc --> {abc > ac}, {abc > abc}",  # noqa: PLR0124
     )
 
 
