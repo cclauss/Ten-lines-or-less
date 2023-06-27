@@ -5,16 +5,20 @@ def set_theory(abc, ac, cde):
     print(f"Set difference:       abc - cde --> {sorted(abc - cde)}")
     print(f"Symmetric difference: abc ^ cde --> {sorted(abc ^ cde)}")
     print(
-        f"Is suubset:           ac <= abc, abc <= abc --> {ac <= abc}, {abc <= abc}",
+        "Is subset:            ac <= abc, abc <= abc --> "
+        f"{ac <= abc}, {abc <= abc}"  # noqa: PLR0124
     )
     print(
-        f"Is superset:          abc >= ac, abc >= abc --> {abc >= ac}, {abc >= abc}",
+        "Is superset:          abc >= ac, abc >= abc --> "
+        f"{abc >= ac}, {abc >= abc}"  # noqa: PLR0124
     )
     print(
-        f"Is proper suubset:    ac  < abc, abc <  abc --> {ac < abc}, {abc < abc}",
+        "Is proper subset:     ac  < abc, abc <  abc --> "
+        f"{ac < abc}, {abc < abc}"  # noqa: PLR0124
     )
     print(
-        f"Is proper superset:   abc >  ac, abc >  abc --> {abc > ac}, {abc > abc}",
+        "Is proper superset:   abc >  ac, abc >  abc --> "
+        f"{abc > ac}, {abc > abc}",  # noqa: PLR0124
     )
 
 
@@ -33,8 +37,8 @@ Union:                abc | cde --> ['a', 'b', 'c', 'd', 'e']
 Intersection:         abc & cde --> ['c']
 Set difference:       abc - cde --> ['a', 'b']
 Symmetric difference: abc ^ cde --> ['a', 'b', 'd', 'e']
-Is suubset:           ac <= abc, abc <= abc --> True, True
+Is subset:            ac <= abc, abc <= abc --> True, True
 Is superset:          abc >= ac, abc >= abc --> True, True
-Is proper suubset:    ac  < abc, abc <  abc --> True, False
+Is proper subset:     ac  < abc, abc <  abc --> True, False
 Is proper superset:   abc >  ac, abc >  abc --> True, False
 """
