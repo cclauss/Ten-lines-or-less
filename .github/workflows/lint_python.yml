@@ -4,8 +4,8 @@ jobs:
   lint_python:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: 3.x
       - run: pip install --upgrade pip ruff setuptools wheel
@@ -15,7 +15,7 @@ jobs:
         run: ruff --exit-zero --select=ALL --statistics --target-version=py37 .
       - name: "Ruff: All fixable (ruff --fix) issues"
         run: ruff --exit-zero --select=ALL --ignore=ANN204,COM812,ERA001,RSE102
-                  --statistics --target-version=py37 . || true | grep "\[\*\]"      
+                  --statistics --target-version=py38 . || true | grep "\[\*\]"      
       - run: pip install black codespell mypy pytest safety
       - run: black --check .
       - run: codespell --quiet-level=1  # --ignore-words-list="" --skip="*.css,*.js,*.lock"
