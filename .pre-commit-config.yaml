@@ -11,12 +11,11 @@ repos:
         args:
           - --quiet-level=2
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.1.13
+    rev: v0.1.11
     hooks:
       - id: ruff
         args:
           - --select=A,B,C,E,F,I,PL,RUF,UP,W
-          - --exit-zero
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.8.0
     hooks:
