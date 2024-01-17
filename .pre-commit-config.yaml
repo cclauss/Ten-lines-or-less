@@ -10,7 +10,7 @@ repos:
         args:
           - --quiet-level=2
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.1.13
+    rev: d16c4a2d25a27dad1ef26c0e496471139adb4522
     hooks:
       - id: ruff
         args:
