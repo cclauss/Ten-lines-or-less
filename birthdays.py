@@ -25,7 +25,9 @@ text = "\n".join(
 )
 
 print(
-    f"Upcoming Birthdays:\n{'=' * 19}\n{text}"
-    if text
-    else "You don't have any birthdays in your address book.",
+    (
+        f"Upcoming Birthdays:\n{'=' * 19}\n{text}"
+        if text
+        else "You don't have any birthdays in your address book."
+    ),
 )
