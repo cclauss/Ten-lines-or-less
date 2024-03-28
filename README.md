@@ -1,7 +1,7 @@
 Ten-lines-or-less
 =================
 
-![alt text](https://img.shields.io/badge/Python-3.6-blue.svg "Python 3.6+")
+![alt text](https://img.shields.io/badge/Python-3.12-blue.svg "Python 3.12+")
 ![alt text](https://img.shields.io/travis/cclauss/Ten-lines-or-less/master.svg?logo=travis "Travis CI")
 
 Python scripts that are short but useful or interesting.
