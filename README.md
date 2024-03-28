@@ -2,7 +2,7 @@ Ten-lines-or-less
 =================
 
 ![alt text](https://img.shields.io/badge/Python-3.12-blue.svg "Python 3.12+")
-![alt text](https://img.shields.io/travis/cclauss/Ten-lines-or-less/master.svg?logo=travis "Travis CI")
+[![lint_python](https://github.com/cclauss/Ten-lines-or-less/actions/workflows/lint_python.yml/badge.svg)](https://github.com/cclauss/Ten-lines-or-less/actions/workflows/lint_python.yml)
 
 Python scripts that are short but useful or interesting.
 
