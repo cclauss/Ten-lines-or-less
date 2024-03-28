@@ -6,4 +6,7 @@ Ten-lines-or-less
 
 Python scripts that are short but useful or interesting.
 
+> [!IMPORTANT]  
+> Ten is an approximate number. ;-)
+
 Many of these scripts require [Pythonista](http://omz-software.com/pythonista)...
