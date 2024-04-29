@@ -2,7 +2,7 @@ ci:
   autofix_prs: true
 repos:
   - repo: https://github.com/psf/black
-    rev: 24.4.0
+    rev: 24.4.2
     hooks:
       - id: black
   - repo: https://github.com/codespell-project/codespell
@@ -12,13 +12,13 @@ repos:
         args:
           - --quiet-level=2
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.4.1
+    rev: v0.4.2
     hooks:
       - id: ruff
         args:
           - --select=A,B,C,E,F,I,PL,RUF,UP,W
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.9.0
+    rev: v1.10.0
     hooks:
       - id: mypy
         # By default, mypy will run with mypy --ignore-missing-imports,
