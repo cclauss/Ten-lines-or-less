@@ -5,20 +5,16 @@ def set_theory(abc, ac, cde):
     print(f"Set difference:       abc - cde --> {sorted(abc - cde)}")
     print(f"Symmetric difference: abc ^ cde --> {sorted(abc ^ cde)}")
     print(
-        "Is subset:            ac <= abc, abc <= abc --> "
-        f"{ac <= abc}, {abc <= abc}"  # noqa: PLR0124
+        "Is subset:            ac <= abc, abc <= abc --> " f"{ac <= abc}, {abc <= abc}"  # noqa: PLR0124
     )
     print(
-        "Is superset:          abc >= ac, abc >= abc --> "
-        f"{abc >= ac}, {abc >= abc}"  # noqa: PLR0124
+        "Is superset:          abc >= ac, abc >= abc --> " f"{abc >= ac}, {abc >= abc}"  # noqa: PLR0124
     )
     print(
-        "Is proper subset:     ac  < abc, abc <  abc --> "
-        f"{ac < abc}, {abc < abc}"  # noqa: PLR0124
+        "Is proper subset:     ac  < abc, abc <  abc --> " f"{ac < abc}, {abc < abc}"  # noqa: PLR0124
     )
     print(
-        "Is proper superset:   abc >  ac, abc >  abc --> "
-        f"{abc > ac}, {abc > abc}",  # noqa: PLR0124
+        "Is proper superset:   abc >  ac, abc >  abc --> " f"{abc > ac}, {abc > abc}",  # noqa: PLR0124
     )
 
 
