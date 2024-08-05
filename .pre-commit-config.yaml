@@ -1,10 +1,6 @@
 ci:
   autofix_prs: true
 repos:
-  - repo: https://github.com/psf/black
-    rev: 24.8.0
-    hooks:
-      - id: black
   - repo: https://github.com/codespell-project/codespell
     rev: v2.3.0
     hooks:
@@ -14,6 +10,7 @@ repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.5.6
     hooks:
+      - id: ruff format
       - id: ruff
         args:
           - --select=A,B,C,E,F,I,PL,RUF,UP,W
