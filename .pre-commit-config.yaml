@@ -1,5 +1,6 @@
 ci:
   autofix_prs: true
+  autoupdate_schedule: monthly
 repos:
   - repo: https://github.com/codespell-project/codespell
     rev: v2.3.0
