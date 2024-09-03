@@ -10,14 +10,14 @@ jobs:
           python-version: 3.x
       - run: pip install --upgrade pip ruff setuptools wheel
       - name: "Ruff: Show stopper (must-fix) issues"
-        run: ruff check . --select=E9,F63,F7,F82,PLE,YTT .
+        run: ruff check --select=E9,F63,F7,F82,PLE,YTT
       - name: "Ruff: All issues"
         run: ruff check --exit-zero --select=ALL --statistics --target-version=py38 .
+      - run: ruff format
       - name: "Ruff: All fixable (ruff --fix) issues"
         run: ruff check --exit-zero --select=ALL --ignore=ANN204,COM812,ERA001,RSE102
                   --statistics --target-version=py38 . || true | grep "\[\*\]"      
-      - run: pip install black codespell mypy pytest safety
-      - run: black --check .
+      - run: pip install codespell mypy pytest safety
       - run: codespell --quiet-level=1  # --ignore-words-list="" --skip="*.css,*.js,*.lock"
       - run: pip install -r requirements.txt || pip install --editable . || pip install . || true
       - run: mkdir --parents --verbose .mypy_cache
