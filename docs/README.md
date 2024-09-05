@@ -1,8 +1,5 @@
 # Ten lines or less
-```{toctree}
-:maxdepth: 2
-:caption: # Table of Contents
 
-README.md
-```
+This is where the good stuff is!
+
 Christian Clauss
