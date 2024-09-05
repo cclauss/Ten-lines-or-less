@@ -1,4 +1,4 @@
-name: "Sphinx: Render docs"
+name: sphinx
 
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
@@ -32,7 +32,7 @@ jobs:
       - run: pip install --upgrade pip
       - run: pip install -r docs/requirements.txt
       - uses: actions/configure-pages@v5
-      - run: sphinx-build
+      - run: sphinx-build docs docs/_build/html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs/_build/html
@@ -46,4 +46,3 @@ jobs:
     steps:
       - uses: actions/deploy-pages@v4
         id: deployment
-        
