@@ -33,7 +33,7 @@ jobs:
       - run: pip install -r docs/requirements.txt
       - uses: actions/configure-pages@v5
         # id: pages
-      - run: sphinx-build docs _build
+      - run: sphinx-build docs _build/html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs/_build/html
