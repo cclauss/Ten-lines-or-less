@@ -9,5 +9,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: 3.13
+          allow-prereleases: true
       - run: pip install beautifulsoup4 lxml requests
       - run: python trending_python.py
