@@ -1,0 +1,53 @@
+[project]
+name = "ten-lines-or-less"
+version = "0.1.0"
+description = "Ten lines or less of Python code"
+authors = [ { name = "Christian Clauss" } ]
+requires-python = ">=3.13"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.13",
+]
+optional-dependencies.docs = [
+  "myst-parser",
+  "sphinx-autoapi",
+  "sphinx-pyproject",
+]
+
+[tool.sphinx-pyproject]
+copyright = "2014, Christian Clauss"
+autoapi_dirs = [ "." ]
+exclude_patterns = [
+  ".*/*",
+  "docs/conf.py",
+]
+extensions = [
+  "autoapi.extension",
+  "myst_parser",
+]
+html_static_path = [ "_static" ]
+html_theme = "alabaster"
+myst_enable_extensions = [
+  "amsmath",
+  "attrs_inline",
+  "colon_fence",
+  "deflist",
+  "dollarmath",
+  "fieldlist",
+  "html_admonition",
+  "html_image",
+  # "linkify",
+  "replacements",
+  "smartquotes",
+  "strikethrough",
+  "substitution",
+  "tasklist",
+]
+myst_fence_as_directive = [
+  "include",
+]
+templates_path = [ "_templates" ]
+[tool.sphinx-pyproject.source_suffix]
+".rst" = "restructuredtext"
+".txt" = "markdown"
+".md" = "markdown"
