@@ -41,6 +41,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    if: github.event_name != 'pull_request'
     needs: build_docs
     runs-on: ubuntu-latest
     steps:
