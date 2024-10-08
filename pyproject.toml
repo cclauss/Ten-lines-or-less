@@ -16,10 +16,10 @@ optional-dependencies.docs = [
 
 [tool.sphinx-pyproject]
 copyright = "2014, Christian Clauss"
-autoapi_dirs = [ "." ]
+autoapi_dirs = [ "src" ]
 exclude_patterns = [
   ".*/*",
-  "docs/conf.py",
+  "docs/",
 ]
 extensions = [
   "autoapi.extension",
