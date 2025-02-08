@@ -3,13 +3,13 @@ ci:
   autoupdate_schedule: monthly
 repos:
   - repo: https://github.com/codespell-project/codespell
-    rev: v2.3.0
+    rev: v2.4.1
     hooks:
       - id: codespell
         args:
           - --quiet-level=2
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.8.6
+    rev: v0.9.5
     hooks:
       - id: ruff-format
       - id: ruff
