@@ -9,7 +9,7 @@ repos:
         args:
           - --quiet-level=2
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.9.4
+    rev: v0.9.5
     hooks:
       - id: ruff-format
       - id: ruff
