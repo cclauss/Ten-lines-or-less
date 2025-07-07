@@ -11,10 +11,10 @@ repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.12.2
     hooks:
-      - id: ruff-format
-      - id: ruff
+      - id: ruff-check
         args:
           - --select=A,B,C,E,F,I,PL,RUF,UP,W
+      - id: ruff-format
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.16.1
     hooks:
