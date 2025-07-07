@@ -9,7 +9,7 @@ class MyClass:
         raise self.not_implemented()
 
     def not_implemented(self):
-        import inspect
+        import inspect  # noqa: PLC0415
 
         fmt = "Class {} does not implement {}()"
         caller_name = inspect.getouterframes(inspect.currentframe(), 2)[1][3]
