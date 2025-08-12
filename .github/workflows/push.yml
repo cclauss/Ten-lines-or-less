@@ -5,6 +5,6 @@ jobs:
     name: Find Python 3 syntax errors and undefined names
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - name: Find Python 3 syntax errors and undefined names
       uses: cclauss/Find-Python-syntax-errors-action@master
