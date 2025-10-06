@@ -9,14 +9,14 @@ repos:
         args:
           - --quiet-level=2
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.12.11
+    rev: v0.13.3
     hooks:
       - id: ruff-check
         args:
           - --select=A,B,C,E,F,I,PL,RUF,UP,W
       - id: ruff-format
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.17.1
+    rev: v1.18.2
     hooks:
       - id: mypy
         # By default, mypy will run with mypy --ignore-missing-imports,
