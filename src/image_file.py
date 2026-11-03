@@ -1,4 +1,4 @@
-# See: https://forum.omz-software.com/topic/2407/images-not-loading-from-camera-roll  # noqa
+# See: https://forum.omz-software.com/topic/2407/images-not-loading-from-camera-roll
 
 import console, photos, ui  # noqa
 
